@@ -50,30 +50,44 @@ $(document).ready(function () {
 		});
 	});
 
-	// // Вызов функции подгрузки изображений
-	// loadBigImg();
-	// loadBigBacground();
+	// Стилизация выпадающего списка
+	$('.js-select').chosen({
+		disable_search: true,
+	});
 
-	// // Вызов функции прижатия футера к низу экрана
-	// footerBind('.js-main','.js-header,.js-footer');
-	// $(window).on('resize',function(){footerBind('.js-main','.js-header,.js-footer')});
+	// Табуляция
+	if ($('.js-tabs-page').length) {
+		$('.js-tabs-page-list').each(function(){
+			$(this).find('.js-tabs-page-item:first').addClass("active");
+		});
+
+		$('.js-tabs-page-content').each(function(){
+			$(this).find('.js-tabs-page-content-item:first').fadeIn();
+		});
+
+		$('.js-tabs-page-item').click(function(e) {
+			e.preventDefault();
+			var $parent = $(this).parents('.js-tabs-page');
+
+			$parent.find('.js-tabs-page-content-item').hide();
+			$parent.find('.js-tabs-page-item').removeClass('active');
+
+			$(this).addClass("active");
+			$parent.find('#' + $(this).attr('data-item')).fadeIn();
+		});
+	}
+
+	// Слайдер партнеров
+	$('.js-partner').slick({
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1
+	});
+
+	// Слайдер отзывов
+	$('.js-review').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
 });
-
-// // Загрузка больших изображений
-// function loadBigImg() {
-// 	var $imgDefer = $('[data-src]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlImgBig = $(this).attr("data-src");
-// 		$(this).attr("src", urlImgBig);
-// 	});
-// }
-
-// function loadBigBacground() {
-// 	var $imgDefer = $('[data-background]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlBackgroundBig = $(this).attr("data-background");
-// 		$(this).css("background-image", "url("+ urlBackgroundBig +")");
-// 	});
-// }

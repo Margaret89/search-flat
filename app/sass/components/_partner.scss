@@ -1,0 +1,18 @@
+/*-------------- partner -----------------*/
+.partner-wrap{
+	margin-bottom: 112px;
+	
+	.h1-big{
+		margin-bottom: 70px;
+	}
+}
+
+.partner{
+	&__item{
+		text-align: center;
+	}
+
+	&__item img{
+		display: inline-block;
+	}
+}

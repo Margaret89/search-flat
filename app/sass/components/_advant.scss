@@ -1,0 +1,50 @@
+/*-------------- advant -----------------*/
+.advant-wrap{
+	background: url(#{$path-img}/bg-advant.png) no-repeat right center;
+	min-height: 1000px;
+	margin-top: -220px;
+	padding-top: 305px;
+	margin-bottom: -170px;
+}
+
+.advant{
+	&__item{
+		border: 1px solid #fff;
+		border-top: 0;
+		padding: 54px 30px 30px;
+		position: relative;
+		margin-top: 32px;
+		margin-bottom: 44px;
+	}
+
+	&__item::before,
+	&__item::after{
+		content: '';
+		display: inline-block;
+		height: 1px;
+		width: 35px;
+		background: #fff;
+		position: absolute;
+		top: 0;
+	}
+
+	&__item::before{
+		left: 0;
+	}
+
+	&__item::after{
+		width: calc(100% - 140px);
+		right: 0;
+	}
+
+	&__icon{
+		width: 60px;
+		position: absolute;
+		left: 60px;
+		top: -32px;
+	}
+
+	&__text{
+		@include font(normal, normal, 18px, 1.5, $color-black);
+	}
+}

@@ -1,0 +1,78 @@
+/*-------------- review -----------------*/
+.review{
+	position: relative;
+
+	&::after{
+		content: '';
+		display: inline-block;
+		width: 227px;
+		height: 168px;
+		background: url(#{$path-img}/riviewt-bg-pic.png) no-repeat center;
+		position: absolute;
+		top: -130px;
+		right: -12px;
+	}
+
+	&__item{
+		padding: 0 100px;
+	}
+
+	&__content{
+		padding: 57px 80px;
+		position: relative;
+		background: #fff;
+		border-radius: 4px;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 112px;
+		height: 112px;
+		border-radius: 50%;
+		border: 6px solid #ebebeb;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		top: 26px;
+		left: -56px;
+	}
+
+	&__head{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__name{
+		@include font(normal, normal, 22px, 1.2, $color-black);
+		text-transform: uppercase;
+		margin-bottom: 3px;
+	}
+
+	&__post{
+		@include font(normal, normal, 18px, 1.2, $color-grey);
+	}
+
+	&__date{
+		@include font(normal, normal, 16px, 1.2, #adadad);
+		padding-left: 30px;
+	}
+
+	&__text{
+		@include font(normal, normal, 20px, 1.5, #424242);
+		margin-top: 33px;
+	}
+
+	&__resource{
+		@include font(normal, normal, 16px, 1.2, $color-grey);
+		text-transform: uppercase;
+		text-align: right;
+		margin-top: 38px;
+		padding-top: 27px;
+		border-top: 1px solid #dbdbdb;
+	}
+
+	&__resource-name{
+		color: #e20303;
+	}
+}

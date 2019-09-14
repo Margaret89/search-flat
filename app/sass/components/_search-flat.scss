@@ -1,0 +1,34 @@
+/*-------------- search-flat -----------------*/
+.search-flat-wrap{
+	margin-bottom: 124px;
+}
+
+.search-flat{
+	&__fields{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 46px;
+	}
+
+	.chosen-container:not(:last-child){
+		margin-right: 1px;
+	}
+
+	&__btn{
+		text-align: center;
+	}
+
+	&__btn .btn:not(:last-child){
+		margin-right: 6px;
+	}
+
+	.btn,
+	input[type="submit"].btn{
+		min-width: 290px;
+	}
+
+	.btn--color,
+	input[type="submit"].btn--color{
+		min-width: 152px;
+	}
+}

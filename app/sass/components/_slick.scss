@@ -1,0 +1,53 @@
+/*-------------- slick -----------------*/
+.slick{
+	&-arrow{
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 1px solid #ccc;
+		outline: 0;
+		background: transparent;
+		font-size: 0;
+		position: absolute;
+		@include top-center;
+		cursor: pointer;
+	}
+
+	&-arrow:active,
+	&-arrow:focus{
+		outline: 0;
+	}
+
+	&-arrow::after{
+		content: '';
+		display: inline-block;
+		width: 14px;
+		height: 20px;
+		background-image:  url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&-arrow:hover{
+		background: rgba(252,179,10,1);
+		background: -moz-linear-gradient(top, rgba(252,179,10,1) 0%, rgba(254,109,13,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,179,10,1)), color-stop(100%, rgba(254,109,13,1)));
+		background: -webkit-linear-gradient(top, rgba(252,179,10,1) 0%, rgba(254,109,13,1) 100%);
+		background: -o-linear-gradient(top, rgba(252,179,10,1) 0%, rgba(254,109,13,1) 100%);
+		background: -ms-linear-gradient(top, rgba(252,179,10,1) 0%, rgba(254,109,13,1) 100%);
+		background: linear-gradient(to bottom, rgba(252,179,10,1) 0%, rgba(254,109,13,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcb30a', endColorstr='#fe6d0d', GradientType=0 );
+	}
+
+	&-prev.slick-arrow{left: -88px;}
+	&-next.slick-arrow{right: -88px;}
+	&-prev.slick-arrow::after{background-position: -5px -95px;}
+	&-next.slick-arrow::after{background-position: -35px -95px;}
+	&-prev.slick-arrow:hover::after{background-position: -5px -125px;}
+	&-next.slick-arrow:hover::after{background-position: -35px -125px;}
+}

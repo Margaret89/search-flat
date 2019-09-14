@@ -1,0 +1,163 @@
+/*-------------- special-offer -----------------*/
+.special-offer{
+	position: relative;
+	margin-bottom: 50px;
+
+	&__head{
+		@include font(normal, 700, 46px, 1.13, $color-black);
+		margin-bottom: 50px;
+		max-width: 300px;
+	}
+
+	.tabs-page__list{
+		position: absolute;
+		top: 10px;
+		right: 0;
+		margin-bottom: 0;
+	}
+}
+
+.offer-list{
+	&__item{
+		height: calc(100% - 50px);
+		border-radius: 4px;
+		margin-bottom: 45px;
+		position: relative;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 70%;
+		height: 170px;
+		border-radius: 50%;
+		box-shadow: 0px 20px 20px 0px rgba(0,0,0,0.15);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		z-index: 0;
+	}
+
+	&__content{
+		height: 100%;
+		background: #fff;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__img{
+		display: block;
+		width: 100%;
+		height: 200px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__info{
+		padding: 24px 30px;
+		position: relative;
+	}
+
+	&__info::before{
+		content: '';
+		display: inline-block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 9px 9px 9px;
+		border-color: transparent transparent #ffffff transparent;
+		position: absolute;
+		top: -9px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	&__name,
+	&__name a{
+		@include font(normal, normal, 20px, 1.2, $color-black);
+		text-decoration: none;
+	}
+
+	&__name a:hover{
+		color: $color-yellow;
+	}
+
+	&__subway{
+		@include font(normal, normal, 16px, 1.2, $color-grey);
+		position: relative;
+		margin-top: 8px;
+	}
+
+	&__subway::before{
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 12px;
+		background: url(#{$path-img}/sprite.png) no-repeat -50px -20px;
+		margin-right: 10px;
+	}
+
+	&__bottom{
+		margin-top: 16px;
+		padding-top: 20px;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	&__address{
+		@include font(normal, normal, 16px, 1.2, $color-grey);
+	}
+
+	&__price{
+		@include font(normal, normal, 16px, 1.2, $color-grey);
+		margin-top: 14px;
+	}
+
+	&__price-val{
+		font-size: 20px;
+		font-weight: 700;
+		color: #1f1f1f;
+	}
+
+	&__more{
+		display: block;
+		@include font(normal, normal, 22px, 1.2, $color-black);
+		text-align: center;
+		text-decoration: none;
+		padding: 27px 20px;
+		background: #fff;
+		border-radius: 4px;
+		margin-top: 14px;
+	}
+
+	&__more:hover{
+		background: #5c5c5c;
+		color: #fff;
+	}
+}
+
+a.offer-list__img{
+	cursor: url(#{$path-img}/cursor-loupe.png) 30 30, pointer;
+}
+
+a.offer-list__img::after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: rgba(56,56,56,0.45);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 0.3s ease 0s;
+}
+
+a.offer-list__img:hover::after{
+	opacity: 1;
+}

@@ -1,0 +1,45 @@
+/*-------------- about -----------------*/
+.about-wrap{
+	background: url(#{$path-img}/bg-about.png) no-repeat right center;
+	min-height: 700px;
+	margin-top: -110px;
+	padding-top: 152px;
+	margin-bottom: -95px;
+}
+
+.about{
+	.h1-big{
+		text-align: left;
+		margin-bottom: 38px;
+	}
+
+	&__icons{
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__icons::before{
+		content: '';
+		display: inline-block;
+		width: 85px;
+		height: 90px;
+		background: url(#{$path-img}/about-bg-pic1.png) no-repeat center;
+		position: absolute;
+		left: 10px;
+		top: 5px;
+	}
+
+	&__icons::after{
+		content: '';
+		display: inline-block;
+		width: 197px;
+		height: 194px;
+		background: url(#{$path-img}/about-bg-pic2.png) no-repeat center;
+		position: absolute;
+		right: -115px;
+		bottom: -110px;
+	}
+}

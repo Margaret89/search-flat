@@ -27,7 +27,7 @@ a:focus{
 }
 
 p{
-	@include font(normal, normal, 18px, 1.5, $color-text);
+	@include font(normal, normal, 18px, 1.6, $color-text);
 	padding: 5px 0;
 }
 
@@ -40,6 +40,7 @@ h1,
 .h1-big{
 	@include font(normal, 700, 46px, 1.13, $color-black);
 	text-align: center;
+	margin-bottom: 48px;
 }
 
 h2,
@@ -84,7 +85,7 @@ h6,
 
 main{
 	flex: 1 0 auto;
-	padding-bottom: 100px;
+	padding-bottom: 118px;
 	// height: 100%;
 }
 
@@ -130,6 +131,66 @@ input[type="submit"].btn--border:hover{
 	background: $color-yellow;
 	border-color: $color-yellow;
 	color: #1f1f1f;
+}
+
+.btn--icon{
+	background: transparent;
+	border: 1px solid rgba(0,0,0,0.25);
+	font-size: 20px;
+	color: #1f1f1f;
+	text-transform: none;
+}
+
+.btn--icon:hover{
+	background: #fff;
+	border-color: #fff;
+}
+
+.btn__icon{
+	display: inline-block;
+	vertical-align: middle;
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+
+	&--map{
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -65px;
+	}
+}
+
+.btn:hover .btn__icon--map{
+	background-position: -35px -65px;
+}
+
+.btn--color,
+input[type="submit"].btn--color{
+	background: rgba(252,207,101,1);
+	background: -moz-linear-gradient(top, rgba(252,207,101,1) 0%, rgba(252,179,10,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,207,101,1)), color-stop(100%, rgba(252,179,10,1)));
+	background: -webkit-linear-gradient(top, rgba(252,207,101,1) 0%, rgba(252,179,10,1) 100%);
+	background: -o-linear-gradient(top, rgba(252,207,101,1) 0%, rgba(252,179,10,1) 100%);
+	background: -ms-linear-gradient(top, rgba(252,207,101,1) 0%, rgba(252,179,10,1) 100%);
+	background: linear-gradient(to bottom, rgba(252,207,101,1) 0%, rgba(252,179,10,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fccf65', endColorstr='#fcb30a', GradientType=0 );
+	border: 0;
+	font-size: 20px;
+	color: #1f1f1f;
+	text-transform: none;
+	box-shadow: 0px 4px 0px 0px rgba(219,156,9,1);
+}
+
+.btn--color:hover,
+input[type="submit"].btn--color:hover{
+	background: rgba(252,201,81,1);
+	background: -moz-linear-gradient(top, rgba(252,201,81,1) 0%, rgba(252,139,10,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,201,81,1)), color-stop(100%, rgba(252,139,10,1)));
+	background: -webkit-linear-gradient(top, rgba(252,201,81,1) 0%, rgba(252,139,10,1) 100%);
+	background: -o-linear-gradient(top, rgba(252,201,81,1) 0%, rgba(252,139,10,1) 100%);
+	background: -ms-linear-gradient(top, rgba(252,201,81,1) 0%, rgba(252,139,10,1) 100%);
+	background: linear-gradient(to bottom, rgba(252,201,81,1) 0%, rgba(252,139,10,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcc951', endColorstr='#fc8b0a', GradientType=0 );
+	box-shadow: 0px 4px 0px 0px rgba(219,121,9,1);
 }
 
 .code{
