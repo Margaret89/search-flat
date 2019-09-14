@@ -1,0 +1,15 @@
+@import 'utils/variables';
+@import 'utils/fonts';
+@import "utils/mixins";
+
+/*-------------- base style -----------------*/
+
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+// /*-------------- Components styles -----------------*/
+@import 'components/form-site';
+@import 'components/contents-site';
+@import 'components/fancybox';

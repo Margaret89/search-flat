@@ -1,0 +1,144 @@
+/*-------------- Header -----------------*/
+.header{
+	&__top{
+		background: #383838;
+		position: relative;
+		z-index: 10;
+	}
+
+	&__bottom{
+		background: #fff;
+		padding: 35px 0;
+	}
+
+	&__bottom-content{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo{
+		width: 216px;
+		margin-right: 30px;
+	}
+
+	&__info{
+		padding: 0 15px;
+	}
+
+	&__address,
+	&__phone{
+		@include font(normal, normal, 18px, 1.5, $color-black);
+		position: relative;
+	}
+
+	&__address:before{
+		content: '';
+		display: inline-block;
+		width: 12px;
+		height: 16px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -20px;
+		margin-right: 10px;
+	}
+
+	&__phone:before{
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url(#{$path-img}/sprite.png) no-repeat -25px -20px;
+		margin-right: 10px;
+	}
+
+	&__phone a{
+		text-decoration: none;
+	}
+
+	&__mail,
+	&__time{
+		@include font(normal, normal, 16px, 1.5, #999);
+	}
+}
+
+.top-menu{
+	&__list,
+	&__item,
+	&__sub,
+	&__sub-item{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	&__list{
+		display: flex;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+	&__item{
+		position: relative;
+	}
+
+	&__item,
+	&__link{
+		@include font(normal, 700, 18px, 1.5, #fff);
+		text-decoration: none;
+	}
+
+	&__link{
+		display: inline-block;
+		padding: 10px 45px 12px;
+		position: relative;
+	}
+
+	&__arr{
+		display: inline-block;
+		vertical-align: middle;
+		width: 11px;
+		height: 7px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px -5px;
+		margin-left: 10px;
+	}
+
+	&__item:hover &__link,
+	&__link.current{
+		background: #5c5c5c;
+	}
+
+	&__sub{
+		display: none;
+		width: 660px;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: #5c5c5c;
+		padding: 30px;
+		column-count: 2;
+		column-gap: 55px;
+	}
+
+	&__sub-item,
+	&__sub-link{
+		@include font(normal, normal, 18px, 1.5, #dbdbdb);
+		text-decoration: none;
+	}
+
+	&__sub-link{
+		display: inline-block;
+		padding: 7px 0 8px;
+	}
+
+	&__sub-link:hover{
+		color: #fff;
+	}
+
+	&__item:hover &__sub{
+		display: block;
+	}
+
+	&__sub.turn{
+		left: auto;
+		right: 0;
+	}
+}

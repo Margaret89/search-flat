@@ -1,0 +1,138 @@
+<footer class="footer">
+	<div class="footer__top">
+		<div class="container">
+			<div class="row">
+				<div class="col-3">
+					<div class="footer__head">
+						<a href="#">Услуги</a>
+					</div>
+
+					<ul class="footer-menu">
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Покупателям</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Продавцам</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Зачет недвижимости</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Помощь в получении ипотеки</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Сопровождение сделок</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Юридические услуги</a></li>
+					</ul>
+				</div>
+
+				<div class="col-3">
+					<div class="footer__head">
+						<a href="#">Каталог недвижимости</a>
+					</div>
+
+					<ul class="footer-menu">
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Загородная недвижимость</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Аренда квартир</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Вторичная недвижимость</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Коммерческая недвижимость</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Элитная недвижимость</a></li>
+					</ul>
+
+					<div class="footer__subtitle"><a href="#">Новостройки</a></div>
+				</div>
+
+				<div class="col-3">
+					<div class="footer__head">
+						<a href="#">О компании</a>
+					</div>
+
+					<ul class="footer-menu">
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Агенты</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Отзывы</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Информация</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Наши партнеры</a></li>
+						<li class="footer-menu__item"><a href="#" class="footer-menu__link">Клиенты</a></li>
+					</ul>
+
+					<div class="footer__subtitle"><a href="#">Контакты</a></div>
+				</div>
+
+				<div class="col-3">
+					<div class="footer__contacts">
+						<div class="footer__info">
+							<div class="footer__phone"><a href="tel:+78005505197">8 800 550 51 97</a><br><a href="tel:+78005505197">8 800 550 51 97</a></div>
+
+							<div class="footer__time">Пн. — Сб.: с 9:00 до 20:00</div>
+						</div>
+
+						<div class="footer__info">
+							<div class="footer__address">СПб, пр. Непокоренных 49</div>
+							<div class="footer__mail"><a href="mailto:info@nsr.spb.ru">info@nsr.spb.ru</a></div>
+						</div>
+
+						<a href="#" class="btn btn--border btn--small">Обратный звонок</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer__bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<div class="footer__copyright">© Семейный риэтор. Все права защищены.</div>
+				</div>
+
+				<div class="col-6 d-flex justify-content-end">
+					<a href="#" class="footer__polit">Политика конфиденциальности</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div style="display: none;" id="feedback-form" class="form-site-popup">
+	<form method="get" class="form-site js-valid-form">
+		<div class="form-site__head">Продать квартиру</div>
+		<div class="form-site__text">Закажите консультацию персонального менеджера</div>
+
+		<div class="form-site__field">
+			<label for="name" class="form-site__label">Имя</label>
+			<input type="text" placeholder="Введите ваше имя" required="required" id="name">
+		</div>
+
+		<div class="form-site__group">
+			<div class="form-site__field">
+				<label for="phone" class="form-site__label">Телефон</label>
+				<input type="text" placeholder="+7 (___) ___ __ __" class="js-phone" required="required">
+			</div>
+			
+			<div class="form-site__field">
+				<label for="time"  class="form-site__label">Удобное время для звонка</label>
+				<div class="form-site__time">
+					<div class="form-site__time-item">
+						<input type="time" value="10:00" id="time">
+					</div>
+
+					<div class="form-site__time-line"></div>
+
+					<div class="form-site__time-item">
+						<input type="time" value="21:00">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-site__field">
+			<label for="msg"  class="form-site__label">Сообщение</label>
+			<textarea placeholder="Введите ваше сообщение" id="msg"></textarea>
+		</div>
+
+		<div class="form-site__polit">
+			<div class="input-check">
+				<input type="checkbox" id="checkbox1" checked="checked">
+				<label for="checkbox1" class="input-check__label"><span class="input-check__mark"></span>Я согласен с <a href="#">Политикой конфиденциальности</label>
+			</div>
+		</div>
+
+		<input type="submit" value="Отправить" class="btn">
+	</form>
+</div>
+
+<!-- Попап об успешной отправки письма -->
+<div style="display: none;" id="msg-success" class="success-alert">
+	<div class="success-alert__text">Ваше сообщение успешно отправлено!</div>
+</div>
