@@ -90,4 +90,18 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1
 	});
+
+	// Раскрытие параметров фильтра
+	if ($('.js-filter-param').length) {
+		$(".js-filter-param").on('click','.js-filter-head',function(event){
+			event.preventDefault();
+			$(this).parent().toggleClass("opened");
+			if($(this).parent().hasClass("opened")){
+				$(this).parent().children(".js-filter-list").slideDown(300);
+			}
+			else{
+				$(this).parent().children(".js-filter-list").slideUp(300);
+			}
+		});
+	}
 });

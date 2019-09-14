@@ -1,0 +1,30 @@
+﻿/*----------- bredcrumb -------------*/
+.bredcrumb{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 26px 0 18px;
+
+	&__item{
+		display: inline-block;
+		@include font(normal, normal, 18px, 1.2, #999);
+		text-decoration: none;
+		position: relative;
+	}
+
+	&__item:not(:last-child){
+		margin-right: 25px;
+	}
+
+	&__item:not(:last-child)::after{
+		content: '\00BB';
+		color: #999;
+		position: absolute;
+		right: -17px;
+		@include top-center;
+	}
+}
+
+a.bredcrumb__item:hover{
+	color: $color-black;
+}

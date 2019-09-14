@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Главная страница</title>
+		<title>Каталог</title>
 		<link rel="stylesheet" href="css/bootstrap-reboot.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
@@ -104,22 +104,162 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<div class="contents-site">
-								<div class="contents-site__item">
-									<a href="main.html">Главная страница</a>
-								</div>
-
-								<div class="contents-site__item">
-									<a href="catalog.html">Каталог</a>
-								</div>
-
-								<div class="contents-site__item">
-									<a href="tipografika.html">Типографика</a>
-								</div>
+							<div class="bredcrumb">
+								<a href="/" class="bredcrumb__item">Главная</a>
+								<a href="/" class="bredcrumb__item">Каталог</a>
+								<span class="bredcrumb__item">Квартира</span>
 							</div>
+
+							<h1>Купить 1 комнатную квартиру в СПб</h1>
 						</div>
 					</div>
 				</div>
+
+				<div class="catalog">
+					<div class="container">
+						<div class="row">
+							<div class="col-3">
+								<div class="catalog-filter js-catalog-filter">
+									<form method="get" class="catalog-filter__form">
+										<div class="catalog-filter__param-wrap">
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Тип недвижимости</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<select data-placeholder="Квартира" class="js-select">
+														<option value=""></option>
+														<option value="Покупка">Комната</option>
+														<option value="Аренда">Дом</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Общая стоимость, руб.</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<select data-placeholder="Квартира" class="js-select">
+														<option value=""></option>
+														<option value="Покупка">Комната</option>
+														<option value="Аренда">Дом</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Цена за м<sup>2</sup>, руб.</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<select data-placeholder="Квартира" class="js-select">
+														<option value=""></option>
+														<option value="Покупка">Комната</option>
+														<option value="Аренда">Дом</option>
+													</select>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Расположение</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<textarea placeholder="Введите название"></textarea>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox1" >
+														<label for="checkbox1" class="input-check__label"><span class="input-check__mark"></span>Ленинградская область</label>
+													</div>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox2" >
+														<label for="checkbox2" class="input-check__label"><span class="input-check__mark"></span>Регион</label>
+													</div>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox3" >
+														<label for="checkbox3" class="input-check__label"><span class="input-check__mark"></span>Санкт-Петербург</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Район</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<div class="input-check">
+														<input type="checkbox" id="checkbox4" >
+														<label for="checkbox4" class="input-check__label"><span class="input-check__mark"></span>Ленинградский</label>
+													</div>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox5" >
+														<label for="checkbox5" class="input-check__label"><span class="input-check__mark"></span>Московский</label>
+													</div>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox6" >
+														<label for="checkbox6" class="input-check__label"><span class="input-check__mark"></span>Санкт-Петербург</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Метро</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<div class="input-check">
+														<input type="checkbox" id="checkbox7" >
+														<label for="checkbox7" class="input-check__label"><span class="input-check__mark"></span>Киевская</label>
+													</div>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox8" >
+														<label for="checkbox8" class="input-check__label"><span class="input-check__mark"></span>Проспект Просвещения</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Улица</div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<div class="input-check">
+														<input type="checkbox" id="checkbox9" >
+														<label for="checkbox9" class="input-check__label"><span class="input-check__mark"></span>ул. Свободы</label>
+													</div>
+
+													<div class="input-check">
+														<input type="checkbox" id="checkbox10" >
+														<label for="checkbox10" class="input-check__label"><span class="input-check__mark"></span>Суздальское шос</label>
+													</div>
+												</div>
+											</div>
+
+											<div class="catalog-filter__param js-filter-param">
+												<div class="catalog-filter__head js-filter-head">Общая площадь, м<sup>2</sup></div>
+
+												<div class="catalog-filter__list js-filter-list">
+													<select data-placeholder="Квартира" class="js-select">
+														<option value=""></option>
+														<option value="Покупка">Комната</option>
+														<option value="Аренда">Дом</option>
+													</select>
+												</div>
+											</div>
+										</div><!-- end catalog-filter__param js-filter-param-wrap -->
+
+										<div class="catalog-filter__btn">
+											<input type="submit" value="Сбросить фильтр" class="btn btn--border">
+										</div>
+									</form>
+								</div><!-- end catalog-filter -->
+							</div>
+
+							<div class="col-9">
+								
+							</div>
+						</div>
+					</div>
+				</div><!-- end catalog -->
 			</main>
 			<footer class="footer">
 				<div class="footer__top">
