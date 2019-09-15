@@ -15,4 +15,7 @@
 	&__item img{
 		display: inline-block;
 	}
+
+	&{display: none;}
+	&.slick-initialized{display: block;}
 }

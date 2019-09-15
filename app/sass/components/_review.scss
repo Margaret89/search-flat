@@ -2,6 +2,9 @@
 .review{
 	position: relative;
 
+	&{display: none;}
+	&.slick-initialized{display: block;}
+
 	&::after{
 		content: '';
 		display: inline-block;

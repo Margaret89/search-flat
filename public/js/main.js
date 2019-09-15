@@ -8,14 +8,10 @@ $(document).ready(function () {
 
 	function posSubMenu() {
 		var menuWidth = $('.js-top-menu').outerWidth();
-		console.log(menuWidth);
 
 		$('.js-top-menu__sub').each(function(indx, element){
 			var elemWidth = $(element).outerWidth();
 			var posElem = $(element).parent('.js-top-menu-item').position().left;
-
-			console.log(elemWidth);
-			console.log(posElem);
 
 			if (menuWidth < elemWidth + posElem) {
 				$(element).addClass('turn');
@@ -29,7 +25,6 @@ $(document).ready(function () {
 		}
 	});
 
-	
 	// Маска для телефона 
 	$.mask.definitions['~'] = "[+-]";
 	$(".js-phone").mask("+7 (999) 999-9999");
@@ -78,18 +73,22 @@ $(document).ready(function () {
 	}
 
 	// Слайдер партнеров
-	$('.js-partner').slick({
-		infinite: true,
-		slidesToShow: 5,
-		slidesToScroll: 1
-	});
+	if ($('.js-partner').length) {
+		$('.js-partner').slick({
+			infinite: true,
+			slidesToShow: 5,
+			slidesToScroll: 1
+		});
+	}
 
 	// Слайдер отзывов
-	$('.js-review').slick({
-		infinite: true,
-		slidesToShow: 1,
-		slidesToScroll: 1
-	});
+	if ($('.js-review').length) {
+		$('.js-review').slick({
+			infinite: true,
+			slidesToShow: 1,
+			slidesToScroll: 1
+		});
+	}
 
 	// Раскрытие параметров фильтра
 	if ($('.js-filter-param').length) {
@@ -104,4 +103,53 @@ $(document).ready(function () {
 			}
 		});
 	}
+
+	// Слайдер для продукции
+	if ($('.js-product-slider-thumb').length) {
+		$('.js-product-slider-thumb').slick({
+			autoplay: false,
+			infinite: true,
+			slidesPerRow: 1,
+			slidesToShow: 5,
+			asNavFor: '.js-product-slider-preview',
+			focusOnSelect: true,
+			prevArrow: '<button type="button" class="slick-prev"></button>',
+			nextArrow: '<button type="button" class="slick-next"></button>',
+		});
+
+		$('.js-product-slider-preview').slick({
+			autoplay: false,
+			infinite: true,
+			slidesPerRow: 1,
+			slidesToShow: 1,
+			asNavFor: '.js-product-slider-thumb',
+			arrows: false,
+			draggable: false,
+			fade: true,
+		});
+	}
+
+	// range слайдер
+	$('.js-range').each(function(indx, element){
+		var minVal = $(element).data('min');
+		var maxVal = $(element).data('max');
+		var curVal = $(element).data('cur');
+		var step = $(element).data('step');
+		var $parentElem = $(element).parents('.js-range-block');
+
+		$(element).slider({
+			min: minVal,
+			max: maxVal,
+			value: curVal,
+			step: step,
+			range: 'min',
+			slide: function(event, ui) {
+				$parentElem.find('.js-range-cur').text(ui.value);
+			}
+		});
+
+		$parentElem.find('.js-range-cur').text(curVal);
+		$parentElem.find('.js-range-min').text(minVal);
+		$parentElem.find('.js-range-max').text(maxVal);
+	});
 });

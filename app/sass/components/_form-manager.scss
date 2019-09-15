@@ -1,0 +1,108 @@
+/*-------------- form-manager -----------------*/
+.form-manager{
+	background: #fff;
+	border-radius: 4px;
+	padding: 30px 30px 22px;
+	text-align: center;
+
+	&__info{
+		padding-bottom: 25px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid #ebebeb;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-bottom: 20px;
+	}
+
+	&__name{
+		@include font(normal, 700, 20px, 1.2, $color-black);
+	}
+
+	&__label{
+		@include font(normal, normal, 16px, 1.2, $color-grey);
+		margin-top: 5px;
+	}
+
+	&__phone{
+		@include font(normal, 700, 24px, 1.2, $color-black);
+	}
+
+	&__text{
+		@include font(normal, normal, 18px, 1.3, $color-grey);
+		max-width: 220px;
+		margin: 7px auto;
+	}
+
+	&__polit{
+		@include font(normal, normal, 16px, 1.4, $color-grey);
+		margin-top: 22px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="time"],
+	textarea{
+		height: 50px;
+		width: 100%;
+		outline: none;
+		border: 1px solid #dbdbdb;
+		border-radius: 4px;
+		font-family: $font-futura;
+		@include font(normal, normal, 18px, 48px, #1f1f1f);
+		padding: 0 27px;
+		margin: 0;
+		margin-bottom: 16px;
+		margin-top: 16px;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="time"],
+	textarea,
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="time"]:focus,
+	textarea:focus{
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+	input[type="time"] {
+		padding: 0 22px;
+	}
+
+	textarea{
+		height: 92px;
+		line-height: 1.5;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	input[type="time"]::placeholder,
+	textarea::placeholder{
+		color: #b8b8b8;
+	}
+
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="time"]:focus,
+	textarea:focus{
+		border-color: #adadad;
+	}
+
+	.btn,
+	input[type="submit"].btn{
+		width: 100%;
+		font-size: 16px;
+	}
+}
