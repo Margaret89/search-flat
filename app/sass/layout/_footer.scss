@@ -144,3 +144,21 @@
 		color: $color-black;
 	}
 }
+
+@media (max-width: 991px) {
+	.footer{
+		&__contacts{
+			display: flex;
+			justify-content: space-between;
+			margin-top: 50px;
+		}
+
+		&__info{
+			margin-bottom: 0;
+		}
+
+		&__info + .btn{
+			margin-top: 0;
+		}
+	}
+}

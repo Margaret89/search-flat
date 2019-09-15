@@ -552,6 +552,58 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   right: 0;
 }
 
+@media (max-width: 1219px) {
+  .top-menu__link {
+    padding: 10px 25px 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  .top-menu__link {
+    padding: 10px 15px 12px;
+  }
+  .header__mail, .header__time {
+    font-size: 14px;
+  }
+  .header__address, .header__phone {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: #383838;
+    padding: 0 15px;
+  }
+  .mobile-header__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mobile-header__logo {
+    padding: 12px 14px;
+    border-left: 1px solid #4c4c4c;
+  }
+  .mobile-header__call {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../img/sprite.png) no-repeat -60px -95px;
+  }
+}
+
 /*-------------- Footer -----------------*/
 .footer {
   background: #fff;
@@ -727,6 +779,24 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 
 .footer-menu__link:hover {
   color: #000;
+}
+
+@media (max-width: 991px) {
+  .footer__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 50px;
+  }
+  .footer__info {
+    margin-bottom: 0;
+  }
+  .footer__info + .btn {
+    margin-top: 0;
+  }
 }
 
 /*-------------- form-site -----------------*/
@@ -1096,6 +1166,12 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   background: transparent;
 }
 
+@media (max-width: 1219px) {
+  .select-city + .chosen-container {
+    min-width: 255px;
+  }
+}
+
 /*-------------- search-flat -----------------*/
 .search-flat-wrap {
   margin-bottom: 124px;
@@ -1133,10 +1209,21 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   min-width: 152px;
 }
 
+@media (max-width: 991px) {
+  .search-flat__fields {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .search-flat .chosen-container {
+    margin-top: 1px;
+  }
+}
+
 /*-------------- page-main -----------------*/
 .page-main {
   padding-top: 90px;
   background: url(../img/bg-page.jpg) no-repeat top center;
+  overflow: hidden;
 }
 
 /*-------------- services -----------------*/
@@ -1181,6 +1268,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 .services__sect {
+  min-width: 50%;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 4px;
@@ -1271,6 +1359,12 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
           column-count: 1;
 }
 
+@media (max-width: 991px) {
+  .services__sect {
+    padding: 35px 20px 50px;
+  }
+}
+
 /*-------------- advant -----------------*/
 .advant-wrap {
   background: url(../img/bg-advant.png) no-repeat right center;
@@ -1281,6 +1375,7 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 }
 
 .advant__item {
+  height: calc(100% - 76px);
   border: 1px solid #fff;
   border-top: 0;
   padding: 54px 30px 30px;
@@ -1387,6 +1482,12 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
 
 .tabs-page__content-item {
   display: none;
+}
+
+@media (max-width: 991px) {
+  .tabs-page__item {
+    min-width: 200px;
+  }
 }
 
 /*-------------- special-offer -----------------*/
@@ -1620,6 +1721,17 @@ a.offer-list__img:hover::after {
   position: absolute;
   right: -115px;
   bottom: -110px;
+}
+
+.about__text {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 1219px) {
+  .about-wrap {
+    margin-bottom: 0;
+  }
 }
 
 /*-------------- team -----------------*/
@@ -1886,6 +1998,12 @@ a.offer-list__img:hover::after {
 
 .review-slider__resource-name {
   color: #e20303;
+}
+
+@media (max-width: 991px) {
+  .review-slider__item {
+    padding: 0 50px;
+  }
 }
 
 /*----------- bredcrumb -------------*/

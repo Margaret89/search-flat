@@ -142,3 +142,58 @@
 		right: 0;
 	}
 }
+
+@media (max-width: 1219px) {
+	.top-menu{
+		&__link{
+			padding: 10px 25px 12px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.top-menu{
+		&__link{
+			padding: 10px 15px 12px;
+		}
+	}
+
+	.header{
+		&__mail,
+		&__time{
+			font-size: 14px;
+		}
+
+		&__address,
+		&__phone{
+			font-size: 16px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.mobile-header{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: #383838;
+		padding: 0 15px;
+
+		&__info{
+			display: flex;
+			align-items: center;
+		}
+
+		&__logo{
+			padding: 12px 14px;
+			border-left: 1px solid #4c4c4c;
+		}
+
+		&__call{
+			display: inline-block;
+			width: 14px;
+			height: 14px;
+			background: url(#{$path-img}/sprite.png) no-repeat -60px -95px;
+		}
+	}
+}

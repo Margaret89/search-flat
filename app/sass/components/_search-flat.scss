@@ -32,3 +32,15 @@
 		min-width: 152px;
 	}
 }
+
+@media (max-width: 991px) {
+	.search-flat{
+		&__fields{
+			flex-wrap: wrap;
+		}
+
+		.chosen-container{
+			margin-top: 1px;
+		}
+	}
+}

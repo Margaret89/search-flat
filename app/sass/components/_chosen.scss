@@ -91,10 +91,8 @@
 	background: transparent;
 }
 
-// @media (max-width: 767px) {
-// 	.chosen-container,
-// 	.chosen-container-single .chosen-single{
-// 		height: 45px;
-// 		line-height: 43px;
-// 	}
-// }
+@media (max-width: 1219px) {
+	.select-city + .chosen-container{
+		min-width: 255px;
+	}
+}

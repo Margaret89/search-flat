@@ -83,3 +83,11 @@
 		color: #e20303;
 	}
 }
+
+@media (max-width: 991px) {
+	.review-slider{
+		&__item{
+			padding: 0 50px;
+		}
+	}
+}

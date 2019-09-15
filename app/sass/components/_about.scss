@@ -42,4 +42,15 @@
 		right: -115px;
 		bottom: -110px;
 	}
+
+	&__text{
+		position: relative;
+		z-index: 3;
+	}
+}
+
+@media (max-width: 1219px) {
+	.about-wrap{
+		margin-bottom: 0;
+	}
 }
