@@ -16,6 +16,10 @@
 		right: -12px;
 	}
 
+	&--no-bg::after{
+		display: none;
+	}
+
 	&__item{
 		padding: 0 100px;
 	}

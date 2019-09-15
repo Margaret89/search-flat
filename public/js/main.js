@@ -152,4 +152,54 @@ $(document).ready(function () {
 		$parentElem.find('.js-range-min').text(minVal);
 		$parentElem.find('.js-range-max').text(maxVal);
 	});
+
+	// Фотогаллерея
+	if ($('.js-photogallery-thumb').length) {
+		$('.js-photogallery-thumb').slick({
+			autoplay: false,
+			infinite: true,
+			slidesPerRow: 1,
+			slidesToShow: 1,
+			// responsive: [
+			// 	{
+			// 		breakpoint: 767,
+			// 		settings: {
+			// 			vertical: false,
+			// 		}
+			// 	},
+			// 	{
+			// 		breakpoint: 479,
+			// 		settings: {
+			// 			vertical: false,
+			// 			slidesPerRow: 3,
+			// 			slidesToShow: 3,
+			// 		}
+			// 	},
+			// ]
+		});
+		$('.js-photogallery-preview').slick({
+			autoplay: false,
+			infinite: true,
+			slidesPerRow: 1,
+			slidesToShow: 1,
+			arrows: false,
+			draggable: false,
+			fade: true,
+			// responsive: [
+			// 	{
+			// 		breakpoint: 767,
+			// 		settings: {
+			// 			vertical: false,
+			// 			fade: true,
+			// 		}
+			// 	},
+			// ]
+		});
+
+		$('.js-photo-thumb-img').click(function(){
+			var numCurElem = $(this).data('num');
+
+			$('.js-photogallery-preview').slick('slickGoTo', numCurElem, true);
+		});
+	}
 });

@@ -1,0 +1,108 @@
+/*-------------- photogallery -----------------*/
+.photogallery{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 105px;
+}
+
+.photogallery-preview,
+.photogallery-thumb{
+	display: none;
+}
+
+.photogallery-preview.slick-initialized,
+.photogallery-thumb.slick-initialized{
+	display: block;
+}
+
+
+.photogallery-thumb{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 390px;
+
+	&__item{
+		display: flex!important;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__img{
+		display: inline-block;
+		width: calc(50% - 5px);
+		height: 130px;
+		margin-bottom: 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.slick-arrow{
+		display: inline-block;
+		width: 95px;
+		height: 130px;
+		border-radius: 0;
+		border: 0;
+		outline: 0;
+		background: #fff;
+		font-size: 0;
+		position: absolute;
+		bottom: 0;
+		top: auto;
+		transform: none;
+		cursor: pointer;
+		z-index: 2;
+		margin-bottom: 10px;
+	}
+
+	.slick-arrow::after{
+		content: '';
+		display: inline-block;
+		width: 14px;
+		height: 20px;
+		background-image:  url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+		position: absolute;
+		@include top-center;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
+
+	.slick-prev.slick-arrow{right: 95px; left: auto;}
+	.slick-next.slick-arrow{right: 0;}
+	.slick-prev.slick-arrow::after{background-position: -5px -95px;}
+	.slick-next.slick-arrow::after{background-position: -35px -95px;}
+	.slick-prev.slick-arrow:hover::after{background-position: -5px -155px;}
+	.slick-next.slick-arrow:hover::after{background-position: -35px -155px;}
+}
+
+.photogallery-preview{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: calc(100% - 400px);
+
+	&__item{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		width: 100%;
+		height: 550px;
+	}
+
+	&__img{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}
