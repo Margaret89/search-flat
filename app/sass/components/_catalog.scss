@@ -14,24 +14,6 @@
 	&__offer-val{
 		color: $color-black;
 	}
-
-	&__bottom{
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin-top: 30px;
-	}
-
-	.pagination{
-		max-width: calc(100% - 240px);
-	}
-
-	&__bottom .btn{
-		height: 60px;
-		line-height: 58px;
-		text-transform: none;
-		min-width: 218px;
-	}
 }
 
 .sort{

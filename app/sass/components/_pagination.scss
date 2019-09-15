@@ -35,3 +35,21 @@
 		color: #fff;
 	}
 }
+
+.pagination-wrap{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 30px;
+
+	.pagination{
+		max-width: calc(100% - 240px);
+	}
+
+	.btn{
+		height: 60px;
+		line-height: 58px;
+		text-transform: none;
+		min-width: 218px;
+	}
+}

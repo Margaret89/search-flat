@@ -82,8 +82,8 @@ $(document).ready(function () {
 	}
 
 	// Слайдер отзывов
-	if ($('.js-review').length) {
-		$('.js-review').slick({
+	if ($('.js-review-slider').length) {
+		$('.js-review-slider').slick({
 			infinite: true,
 			slidesToShow: 1,
 			slidesToScroll: 1
