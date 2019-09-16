@@ -144,6 +144,14 @@ $(document).ready(function () {
 			focusOnSelect: true,
 			prevArrow: '<button type="button" class="slick-prev"></button>',
 			nextArrow: '<button type="button" class="slick-next"></button>',
+			responsive: [
+				{
+					breakpoint: 991,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+			]
 		});
 
 		$('.js-product-slider-preview').slick({
@@ -155,6 +163,14 @@ $(document).ready(function () {
 			arrows: false,
 			draggable: false,
 			fade: true,
+			responsive: [
+				{
+					breakpoint: 991,
+					settings: {
+						arrows: true,
+					}
+				},
+			]
 		});
 	}
 

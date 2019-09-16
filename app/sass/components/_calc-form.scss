@@ -34,3 +34,14 @@
 	input[type="text"]::placeholder{color: #b8b8b8;}
 	input[type="text"]:focus{border-color: #adadad;}
 }
+
+@media (max-width: 767px) {
+	.calc-form{
+		margin-top: 12px;
+		padding: 17px 24px 0;
+
+		input[type="text"]{
+			margin-top: 7px;
+		}
+	}
+}

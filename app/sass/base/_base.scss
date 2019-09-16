@@ -312,9 +312,16 @@ input[type="submit"].btn--color:hover{
 		margin-bottom: 18px;
 	}
 
-	h1{
+	h1,
+	.h1{
 		font-size: 26px;
 		line-height: 1.15;
+	}
+
+	h2,
+	.h2{
+		font-size: 22px;
+		margin-bottom: 0;
 	}
 
 	p{

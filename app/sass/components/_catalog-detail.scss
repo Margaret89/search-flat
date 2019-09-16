@@ -142,3 +142,92 @@ h2 + .cat-detail-param,
 		padding-right: 0;
 	}
 }
+
+@media (max-width: 991px) {
+	.card-info{
+		padding: 25px 20px 30px;
+
+		&__head{
+			font-size: 26px;
+		}
+
+		.btn{
+			min-width: 170px;
+			overflow: hidden;
+		}
+	}
+
+	.cat-detail-param{
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.card-info{
+		margin: 0 -15px 24px;
+		padding: 21px 15px 30px;
+
+		&__head{
+			font-size: 22px;
+			margin-bottom: 7px;
+		}
+
+		&__address{
+			font-size: 16px;
+		}
+
+		&__subway{
+			margin-top: 11px;
+		}
+
+		&__sect:not(:last-child){
+			padding-bottom: 17px;
+			margin-bottom: 19px;
+		}
+
+		&__desc{
+			margin-bottom: 0;
+		}
+
+		&__desc p{
+			line-height: 1.38;
+		}
+	}
+
+	.cat-detail-param{
+		margin-bottom: 10px;
+
+		&__title,
+		&__val{
+			padding: 11px 15px 9px;
+		}
+
+		&__title{
+			width: 70%;
+			padding-left: 0;
+		}
+
+		&__val{
+			width: 30%;
+			padding-right: 0;
+		}
+	}
+
+	h2 + .cat-detail-param,
+	.h2 + .cat-detail-param{
+		margin-top: 0;
+	}
+
+	.catalog-detail{
+		&__map-wrap{
+			margin-bottom: 16px;
+		}
+		
+		&__map{
+			margin-left: -15px;
+			margin-right: -15px;
+			width: calc(100% + 30px);
+			height: 180px;
+		}
+	}
+}
