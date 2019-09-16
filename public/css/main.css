@@ -4036,6 +4036,49 @@ h2 + .cat-detail-param,
   color: #e20303;
 }
 
+@media (max-width: 767px) {
+  .reviews__item {
+    display: block;
+    margin-bottom: 12px;
+  }
+  .reviews__author, .reviews__content {
+    width: 100%;
+  }
+  .reviews__author {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 21px 20px 17px;
+    text-align: left;
+  }
+  .reviews__img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0;
+  }
+  .reviews__info {
+    width: calc(100% - 80px);
+  }
+  .reviews__name, .reviews__post, .reviews__text {
+    font-size: 16px;
+  }
+  .reviews__resource {
+    font-size: 14px;
+    margin-top: 19px;
+    padding-top: 19px;
+    border-top: 1px solid #dbdbdb;
+  }
+  .reviews__content {
+    padding: 0 23px 20px;
+  }
+}
+
 /*-------------- service-page -----------------*/
 .service-desc {
   margin-bottom: 130px;
