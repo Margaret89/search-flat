@@ -44,3 +44,46 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.search-flat-wrap{
+		margin: 0;
+		padding: 0;
+	}
+
+	.search-flat{
+		display: none;
+		background: #ebebeb;
+		padding: 15px;
+
+		&__fields{
+			display: block;
+			margin-bottom: 15px;
+		}
+
+		.chosen-container,
+		.select-price + .chosen-container,
+		.select-city + .chosen-container{
+			min-width: 100%;
+		}
+
+		.chosen-container:not(:last-child){
+			margin-right: 0;
+		}
+
+		.btn,
+		input[type="submit"].btn{
+			width: 100%;
+			min-width: 200px;
+		}
+
+		&__btn .btn:not(:last-child){
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+
+		.fancybox-close-small{
+			display: none;
+		}
+	}
+}

@@ -96,3 +96,10 @@
 		min-width: 255px;
 	}
 }
+
+@media (max-width: 767px) {
+	.chosen-container-single .chosen-single{
+		height: 50px;
+		line-height: 48px;
+	}
+}

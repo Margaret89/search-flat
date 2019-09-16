@@ -49,3 +49,38 @@
 		@include font(normal, normal, 18px, 1.5, $color-black);
 	}
 }
+
+@media (max-width: 767px) {
+	.advant-wrap{
+		margin-top: 0;
+		padding-top: 28px;
+		margin-bottom: 25px;
+		min-height: 0;
+	}
+
+	.advant{
+		display: block;
+
+		&__item{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: auto;
+			background: #fff;
+			border-radius: 4px;
+			margin-top: 0;
+			margin-bottom: 1px;
+			padding: 18px 15px 14px;
+		}
+
+		&__icon{
+			position: static;
+			width: 46px;
+		}
+
+		&__text{
+			width: calc(100% - 63px);
+			font-size: 16px;
+		}
+	}
+}

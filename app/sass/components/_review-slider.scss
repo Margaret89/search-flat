@@ -91,3 +91,50 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.review-slider{
+		&::after{
+			display: none;
+		}
+
+		&__item{
+			padding: 0;
+		}
+
+		&__head{
+			align-items: center;
+		}
+
+		&__img{
+			position: static;
+			border: 0;
+			width: 60px;
+			height: 60px;
+		}
+
+		&__content{
+			padding: 22px;
+		}
+
+		&__name,
+		&__post,
+		&__text{
+			font-size: 16px;
+		}
+
+		&__text{
+			margin-top: 16px;
+		}
+
+		&__author{
+			width: calc(100% - 80px);
+		}
+
+		&__resource{
+			font-size: 14px;
+			margin-top: 19px;
+			padding-top: 19px;
+		}
+	}
+}

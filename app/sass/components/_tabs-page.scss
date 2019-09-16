@@ -70,3 +70,21 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.tabs-page{
+		&__list{
+			flex-wrap: wrap;
+		}
+
+		&__item{
+			min-width: 145px;
+		}
+
+		&__item::after,
+		&__item.active::after,
+		&__item:hover::after{
+			display: none;
+		}
+	}
+}

@@ -161,3 +161,40 @@ a.offer-list__img::after{
 a.offer-list__img:hover::after{
 	opacity: 1;
 }
+
+@media (max-width: 767px) {
+	.special-offer{
+		margin-bottom: 23px;
+		
+		&__head{
+			font-size: 26px;
+			line-height: 1.23;
+			text-align: center;
+			margin-bottom: 18px;
+		}
+
+		.tabs-page__list{
+			position: static;
+		}
+	}
+
+	.offer-list{
+		padding: 0 10px;
+
+		&__content,
+		&__item{
+			height: auto;
+		}
+
+		&__item{
+			margin-bottom: 10px;
+		}
+
+		&__more{
+			font-size: 18px;
+			margin-left: -10px;
+			margin-right: -10px;
+			padding: 24px 10px;
+		}
+	}
+}

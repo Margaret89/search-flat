@@ -162,3 +162,41 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.footer{
+		&__contacts{
+			display: block;
+			margin-top: 0;
+		}
+
+		&__top{
+			padding: 33px 0 0 22px;
+		}
+
+		&__info{
+			margin-bottom: 25px;
+		}
+
+		&__info + .btn{
+			margin-top: 14px;
+			margin-left: 20px;
+		}
+
+		.btn{
+			height: 52px;
+			line-height: 52px;
+		}
+
+		&__bottom{
+			border-top: 0;
+			text-align: center;
+			padding: 35px 0;
+		}
+
+		&__copyright{
+			max-width: 160px;
+			margin: 0 auto 15px;
+		}
+	}
+}

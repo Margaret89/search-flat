@@ -85,6 +85,18 @@ $(document).ready(function () {
 						slidesToShow: 3,
 					}
 				},
+				{
+					breakpoint: 620,
+					settings: {
+						slidesToShow: 2,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 1,
+					}
+				},
 			]
 		});
 	}
@@ -94,7 +106,16 @@ $(document).ready(function () {
 		$('.js-review-slider').slick({
 			infinite: true,
 			slidesToShow: 1,
-			slidesToScroll: 1
+			slidesToScroll: 1,
+			responsive: [
+				{
+					breakpoint: 767,
+					settings: {
+						arrows: false,
+						dots: true,
+					}
+				},
+			]
 		});
 	}
 

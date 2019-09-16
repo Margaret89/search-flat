@@ -9,3 +9,9 @@
 	right: 10px;
 	top: 10px;
 }
+
+@media (max-width: 767px) {
+	.fancybox-content{
+		padding: 15px 15px 20px;
+	}
+}

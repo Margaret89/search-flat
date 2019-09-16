@@ -4,3 +4,9 @@
 	background: url(#{$path-img}/bg-page.jpg) no-repeat top center;
 	overflow: hidden;
 }
+
+@media (max-width: 767px) {
+	.page-main{
+		padding-top: 16px;
+	}
+}

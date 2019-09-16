@@ -33,7 +33,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-								<div class="c-hamburger-wrap active js-close-mobile-menu"><div class="c-hamburger"><span></span></div></div>
+								<div class="c-hamburger-wrap active js-close-mobile-menu d-md-none"><div class="c-hamburger"><span></span></div></div>
 			
 								<nav class="top-menu js-top-menu">
 									<ul class="top-menu__list">
@@ -94,7 +94,7 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
-								<div class="c-hamburger-wrap active js-close-mobile-contacts"><div class="c-hamburger"><span></span></div></div>
+								<div class="c-hamburger-wrap active js-close-mobile-contacts d-md-none"><div class="c-hamburger"><span></span></div></div>
 			
 								<div class="header__bottom-content">
 									<div class="header__logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
@@ -126,9 +126,9 @@
 						<div class="container">
 							<div class="row">
 								<div class="col-12">
-									<div class="h1-big">Поиск квартир в Санкт Петербурге и области</div>
+									<div class="h1-big d-none d-md-block">Поиск квартир в Санкт Петербурге и области</div>
 
-									<form method="get" class="search-flat">
+									<form method="get" class="search-flat" id="search-flat">
 										<div class="search-flat__fields">
 											<select data-placeholder="Продажа" class="js-select">
 												<option value=""></option>
@@ -279,6 +279,16 @@
 						</div>
 					</section>
 
+					<section class="d-block d-md-none">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<a data-fancybox data-src="#search-flat" href="javascript:;"class="btn btn--color" style="max-width: 300px; display: block; margin: 0 auto">Найти квартиру</a>
+								</div>
+							</div>
+						</div>
+					</section>
+
 					<section class="advant-wrap">
 						<div class="container">
 							<div class="row">
@@ -288,7 +298,7 @@
 
 										<div class="advant__list">
 											<div class="row">
-												<div class="col-4">
+												<div class="col-md-4">
 													<div class="advant__item">
 														<div class="advant__icon"><img src="img/advant1.png" alt=""></div>
 
@@ -296,7 +306,7 @@
 													</div>
 												</div>
 
-												<div class="col-4">
+												<div class="col-md-4">
 													<div class="advant__item">
 														<div class="advant__icon"><img src="img/advant2.png" alt=""></div>
 
@@ -304,7 +314,7 @@
 													</div>
 												</div>
 
-												<div class="col-4">
+												<div class="col-md-4">
 													<div class="advant__item">
 														<div class="advant__icon"><img src="img/advant3.png" alt=""></div>
 
@@ -312,7 +322,7 @@
 													</div>
 												</div>
 
-												<div class="col-4">
+												<div class="col-md-4">
 													<div class="advant__item">
 														<div class="advant__icon"><img src="img/advant4.png" alt=""></div>
 
@@ -320,7 +330,7 @@
 													</div>
 												</div>
 
-												<div class="col-4">
+												<div class="col-md-4">
 													<div class="advant__item">
 														<div class="advant__icon"><img src="img/advant5.png" alt=""></div>
 
@@ -328,7 +338,7 @@
 													</div>
 												</div>
 
-												<div class="col-4">
+												<div class="col-md-4">
 													<div class="advant__item">
 														<div class="advant__icon"><img src="img/advant6.png" alt=""></div>
 
@@ -664,11 +674,13 @@
 											<p>Мы являемся официальным партнёром более чем 30 компаний-застройщиков. Благодаря сложившимся долгосрочным отношениям с самыми надёжными застройщиками и подрядчиками города, мы сегодня лидируем по количеству и качеству предложений строящегося жилья. Партнёрские отношения с банками Санкт-Петербурга позволяют АН «Семейный Риэлтор» предложить своим клиентам выгодные условия ипотечного кредитования.</p>
 
 											<p>В АН «Семейный Риэлтор» действует принцип «Коридор Клиента»: вы обращаетесь в наше агентство, и опытный риэлтор проводит вас через все этапы сделки.</p>
+
+											<img src="img/bg-about.png" alt="" class="d-inline-block d-md-none" style="margin: -100px -115px 0;max-width: 150%;">
 										</div>
 									</div>
 								</div>
 
-								<div class="col-6">
+								<div class="col-6 d-none d-lg-block">
 									<div class="about__icons"></div>
 								</div>
 							</div>
@@ -739,7 +751,7 @@
 					<section class="partner-wrap">
 						<div class="container">
 							<div class="row">
-								<div class="col-10 offset-1">
+								<div class="col-md-10 offset-md-1">
 									<div class="h1-big">Наши партнеры</div>
 
 									<div class="partner js-partner">
@@ -763,22 +775,22 @@
 					<section class="review-slider-wrap">
 						<div class="container">
 							<div class="row">
-								<div class="col-10 offset-1">
+								<div class="col-md-10 offset-md-1">
 									<div class="h1-big">Отзывы клиентов</div>
 
 									<div class="review-slider js-review-slider">
 										<div class="review-slider__item">
 											<div class="review-slider__content">
-												<div class="review-slider__img" style="background-image: url(img/review1.jpg);"></div>
-												
 												<div class="review-slider__head">
+													<div class="review-slider__img" style="background-image: url(img/review1.jpg);"></div>
+
 													<div class="review-slider__author">
 														<div class="review-slider__name">Евгений Андреевич</div>
 
 														<div class="review-slider__post">менеджер по продажам</div>
 													</div>
 
-													<time class="review-slider__date">27 октября 2019</time>
+													<time class="review-slider__date d-none d-md-inline-flex">27 октября 2019</time>
 												</div>
 
 												<div class="review-slider__text">Хочется сказать огромное спасибо Светлане за оказанную помощь нашей семье в поиске квартиры! Очень чуткий человек, оптимист, профессионал своего дела! Был подобран прекрасный вариант, который устроил всех членов семьи. Теперь рекомендуем Светлану своим знакомым и друзьям, которые нуждаются в аренде жилья!</div>
@@ -789,16 +801,16 @@
 
 										<div class="review-slider__item">
 											<div class="review-slider__content">
-												<div class="review-slider__img" style="background-image: url(img/team1.jpg);"></div>
-												
 												<div class="review-slider__head">
+													<div class="review-slider__img" style="background-image: url(img/team1.jpg);"></div>
+													
 													<div class="review-slider__author">
 														<div class="review-slider__name">Евгений Андреевич</div>
 
 														<div class="review-slider__post">менеджер по продажам</div>
 													</div>
 
-													<time class="review-slider__date">27 октября 2019</time>
+													<time class="review-slider__date d-none d-md-inline-flex">27 октября 2019</time>
 												</div>
 
 												<div class="review-slider__text">Хочется сказать огромное спасибо Светлане за оказанную помощь нашей семье в поиске квартиры! Очень чуткий человек, оптимист, профессионал своего дела! Был подобран прекрасный вариант, который устроил всех членов семьи. Теперь рекомендуем Светлану своим знакомым и друзьям, которые нуждаются в аренде жилья!</div>
@@ -817,7 +829,7 @@
 				<div class="footer__top">
 					<div class="container">
 						<div class="row">
-							<div class="col-md-4 col-lg-3">
+							<div class="d-none d-md-block col-md-4 col-lg-3">
 								<div class="footer__head">
 									<a href="#">Услуги</a>
 								</div>
@@ -832,7 +844,7 @@
 								</ul>
 							</div>
 			
-							<div class="col-md-4 col-lg-3">
+							<div class="d-none d-md-block col-md-4 col-lg-3">
 								<div class="footer__head">
 									<a href="#">Каталог недвижимости</a>
 								</div>
@@ -848,7 +860,7 @@
 								<div class="footer__subtitle"><a href="#">Новостройки</a></div>
 							</div>
 			
-							<div class="col-md-4 col-lg-3">
+							<div class="d-none d-md-block col-md-4 col-lg-3">
 								<div class="footer__head">
 									<a href="#">О компании</a>
 								</div>
@@ -887,11 +899,11 @@
 				<div class="footer__bottom">
 					<div class="container">
 						<div class="row">
-							<div class="col-6">
+							<div class="col-md-6">
 								<div class="footer__copyright">© Семейный риэтор. Все права защищены.</div>
 							</div>
 			
-							<div class="col-6 d-flex justify-content-end">
+							<div class="col-md-6 d-flex justify-content-center justify-content-md-end">
 								<a href="#" class="footer__polit">Политика конфиденциальности</a>
 							</div>
 						</div>

@@ -37,3 +37,27 @@
 		width: calc(100% - 104px);
 	}
 }
+
+@media (max-width: 767px) {
+	.team{
+		margin-bottom: 10px;
+		
+		&__item{
+			display: block;
+			position: relative;
+			margin-top: 44px;
+			margin-bottom: 17px;
+			padding: 58px 22px 15px;
+		}
+
+		&__img{
+			position: absolute;
+			top: -44px;
+			left: 22px;
+		}
+
+		&__content{
+			width: 100%;
+		}
+	}
+}

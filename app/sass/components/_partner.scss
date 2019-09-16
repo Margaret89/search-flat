@@ -19,3 +19,17 @@
 	&{display: none;}
 	&.slick-initialized{display: block;}
 }
+
+@media (max-width: 767px) {
+	.partner-wrap{
+		margin-bottom: 53px;
+		
+		.h1-big{
+			margin-bottom: 38px;
+		}
+	}
+
+	.partner{
+		padding: 0 40px;
+	}
+}

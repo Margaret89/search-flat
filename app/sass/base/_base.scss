@@ -276,3 +276,44 @@ input[type="submit"].btn--color:hover{
 		@include top-center;
 	}
 }
+
+@media (max-width: 767px) {
+	html,
+	body{
+		font-size: 16px;
+	}
+
+	body{
+		height: auto;
+	}
+
+	.wrapper{
+		overflow: hidden;
+		position: relative;
+	}
+
+	.container{
+		width: 100%!important;
+	}
+
+	main{
+		padding-bottom: 25px;
+	}
+
+	.btn,
+	input[type="submit"].btn{
+		height: 60px;
+		line-height: 58px;
+	}
+
+	.h1-big{
+		font-size: 26px;
+		line-height: 1.23;
+		margin-bottom: 18px;
+	}
+
+	p{
+		font-size: 16px;
+		line-height: 1.5;
+	}
+}
