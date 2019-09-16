@@ -1,19 +1,24 @@
 /*----------- Hamburger -------------*/
+.c-hamburger-wrap{
+	display: inline-block;
+	padding: 15px;
+	cursor: pointer;
+}
+
 .c-hamburger {
 	display: block;
 	position: relative;
 	overflow: hidden;
 	margin: 0;
 	padding: 0;
-	width: 15px;
-	height: 15px;
+	width: 18px;
+	height: 14px;
 	font-size: 0;
 	text-indent: -9999px;
 	appearance: none;
 	box-shadow: none;
 	border-radius: none;
 	border: none;
-	cursor: pointer;
 	transition: background 0.3s;
 	z-index: 25;
 }
@@ -25,11 +30,11 @@
 .c-hamburger span {
 	display: block;
 	position: absolute;
-	top: 7px;
+	top: 5px;
 	left: 0;
 	right: 0px;
 	height: 2px;
-	background: #fff;
+	background: #999;
 	margin: 0 auto;
 }
 
@@ -40,16 +45,16 @@
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: #fff;
+	background-color: #999;
 	content: "";
 }
 
 .c-hamburger span::before {
-	top: -4px;
+	top: -5px;
 }
 
 .c-hamburger span::after {
-	bottom: -4px;
+	bottom: -5px;
 }
 
 .c-hamburgerspan {
@@ -70,22 +75,26 @@
 	transition-property: bottom, transform;
 }
 
-.c-hamburger.active span {
+.c-hamburger-wrap.active{
+	background: #fcb40a;
+}
+
+.c-hamburger-wrap.active span {
 	background: none;
 }
 
-.c-hamburger.active span::before {
+.c-hamburger-wrap.active span::before {
 	top: 0;
 	transform: rotate(45deg);
 }
 
-.c-hamburger.active span::after {
+.c-hamburger-wrap.active span::after {
 	bottom: 0;
 	transform: rotate(-45deg);
 }
 
-.c-hamburger.active span::before,
-.c-hamburger.active span::after {
+.c-hamburger-wrap.active span::before,
+.c-hamburger-wrap.active span::after {
 	transition-delay: 0s, 0.3s;
 	background-color: #fff;
 }
@@ -96,6 +105,6 @@
 	background-color: #fff;
 }
 
-.c-hamburger.active:hover span{
+.c-hamburger-wrap.active:hover span{
 	background-color: transparent;
 }

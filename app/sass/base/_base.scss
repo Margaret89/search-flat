@@ -4,6 +4,13 @@ body{
 	font-family: $font-futura;
 	@include font(normal, normal, 18px, 1.5, $color-text);
 	box-sizing:border-box;
+	height: 100%;
+}
+
+body.no-scroll{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
 }
 
 *,
@@ -76,10 +83,10 @@ h6,
 .wrapper{
 	display: flex;
 	flex-direction: column;
-	min-height: 100vh;
 	width: 100%;
 	max-width: 1920px;
 	margin: 0 auto;
+	min-height: 100vh;
 	height: 100%;
 }
 
@@ -208,6 +215,21 @@ input[type="submit"].btn--color:hover{
 .h-text-justify{text-align: justify !important;}
 .h-text-uppercase{text-transform: uppercase !important;}
 .h-text-bold {font-weight: 700 !important;}
+
+.shadow-site{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	z-index: 99;
+}
+
+.shadow-site.is-visible{
+	display: block;
+}
 
 /* checkbox */
 .input-check{

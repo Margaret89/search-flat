@@ -101,10 +101,7 @@
 		margin-left: 10px;
 	}
 
-	&__item:hover &__link,
-	&__link.current{
-		background: #5c5c5c;
-	}
+	
 
 	&__sub{
 		display: none;
@@ -131,10 +128,6 @@
 
 	&__sub-link:hover{
 		color: #fff;
-	}
-
-	&__item:hover &__sub{
-		display: block;
 	}
 
 	&__sub.turn{
@@ -171,6 +164,19 @@
 	}
 }
 
+@media (min-width: 768px) {
+	.top-menu{
+		&__item:hover &__link,
+		&__link.current{
+			background: #5c5c5c;
+		}
+
+		&__item:hover &__sub{
+			display: block;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.mobile-header{
 		display: flex;
@@ -178,6 +184,7 @@
 		align-items: center;
 		background: #383838;
 		padding: 0 15px;
+		min-height: 47px;
 
 		&__info{
 			display: flex;
@@ -185,8 +192,7 @@
 		}
 
 		&__logo{
-			padding: 12px 14px;
-			border-left: 1px solid #4c4c4c;
+			padding: 8px 14px 12px;
 		}
 
 		&__call{
@@ -194,6 +200,183 @@
 			width: 14px;
 			height: 14px;
 			background: url(#{$path-img}/sprite.png) no-repeat -60px -95px;
+		}
+
+		.c-hamburger-wrap{
+			margin-left: -15px;
+			border-right: 1px solid #4c4c4c;
+		}
+	}
+
+	.header{
+		&__top{
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			z-index: 100;
+			transition: all 0.3s ease 0s;
+			max-height: 100%;
+			overflow-y: auto;
+		}
+
+		&__top.open{
+			left: 0;
+		}
+
+		&__top .c-hamburger-wrap{
+			margin-left: -15px;
+		}
+
+		&__bottom{
+			position: absolute;
+			top: 0;
+			right: -100%;
+			width: 100%;
+			z-index: 100;
+			transition: all 0.3s ease 0s;
+			max-height: 100%;
+			overflow-y: auto;
+			padding: 0;
+			background: #383838;
+		}
+
+		&__bottom.open{
+			right: 0;
+		}
+
+		&__bottom .c-hamburger-wrap{
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		&__bottom-content{
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			padding: 70px 0 30px;
+			color: #fff;
+		}
+
+		&__bottom &__logo{
+			display: none;
+		}
+
+		&__info{
+			padding: 0;
+			margin-bottom: 27px;
+		}
+
+		&__info--phone{
+			order: -1;
+		}
+
+		&__phone-item{
+			display: block;
+		}
+
+		&__phone,
+		&__phone a{
+			color: #fff;
+			font-size: 20px;
+			line-height: 1.4;
+		}
+
+		&__phone{
+			padding-left: 25px;
+		}
+
+		&__phone::before{
+			position: absolute;
+			top: 5px;
+			left: 0;
+		}
+
+		&__time{
+			font-size: 16px;
+			color: #999;
+			padding-left: 25px;
+			margin-top: 8px;
+		}
+
+		&__address{
+			font-size: 18px;
+			color: #fff;
+		}
+
+		&__address::before{
+			margin-right: 14px;
+		}
+
+		&__mail{
+			font-size: 16px;
+			padding-left: 27px;
+			margin-top: 7px;
+		}
+
+		&__bottom .btn{
+			margin-top: 12px;
+			border-color: $color-yellow;
+			color: $color-yellow;
+		}
+
+		&__bottom .btn:hover{
+			color: #1f1f1f;
+		}
+	}
+
+	.top-menu{
+		margin-left: -15px;
+		margin-right: -15px;
+		position: relative;
+
+		&__list{
+			display: block;
+		}
+
+		&__link{
+			width: 100%;
+			position: relative;
+			padding: 13px 15px;
+			background: #424242;
+		}
+
+		&__arr{
+			padding: 15px;
+			height: 100%;
+			width: 45px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: none;
+			margin: 0;
+		}
+
+		&__arr::after{
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 11px;
+			height: 7px;
+			background: url(#{$path-img}/sprite.png) no-repeat -5px -5px;
+			margin-left: 10px;
+			position: absolute;
+			@include top-center;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+		}
+
+		&__item:not(:last-child){
+			border-bottom: 1px solid #383838;
+		}
+
+		&__sub{
+			width: 100%;
+			position: relative;
+			column-count: 1;
+			padding: 15px 15px 15px 30px;
 		}
 	}
 }

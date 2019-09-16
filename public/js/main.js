@@ -210,4 +210,49 @@ $(document).ready(function () {
 			$('.js-photogallery-preview').slick('slickGoTo', numCurElem, true);
 		});
 	}
+
+	// Открыть/Закрыть мобильное меню и контакты
+	$('.js-btn-mobile-menu').click(function(){
+		$('.js-shadow').addClass('is-visible');
+		$('.js-header-top').addClass('open');
+		$('.js-body').addClass('no-scroll');
+	});
+
+	$('.js-btn-mobile-contacts').click(function(){
+		$('.js-shadow').addClass('is-visible');
+		$('.js-header-bottom').addClass('open');
+		$('.js-body').addClass('no-scroll');
+	});
+
+	$('.js-close-mobile-menu').click(function(){
+		closeTopMenu();
+	});
+
+	$('.js-close-mobile-contacts').click(function(){
+		closeContacts();
+	});
+
+	$('.js-shadow').click(function(){
+		closeTopMenu();
+		closeContacts();
+	});
+
+	function closeTopMenu() {
+		$('.js-shadow').removeClass('is-visible');
+		$('.js-header-top').removeClass('open');
+		$('.js-body').removeClass('no-scroll');
+	}
+
+	function closeContacts() {
+		$('.js-shadow').removeClass('is-visible');
+		$('.js-header-bottom').removeClass('open');
+		$('.js-body').removeClass('no-scroll');
+	}
+
+	// Раскрыть подменю
+	$('.js-top-menu-arr').click(function(e){
+		e.preventDefault();
+
+		$(this).parent('.js-top-menu-link').siblings('.js-top-menu__sub').slideToggle();
+	});
 });

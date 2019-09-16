@@ -14,25 +14,31 @@
 		<link rel="stylesheet" href="css/hamburger.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body>
+	<body class="js-body">
 		<div class="wrapper">
+			<div class="shadow-site d-md-none js-shadow"></div>
+			
 			<header class="header">
 				<div class="mobile-header d-flex d-md-none">
-					<div class="c-hamburger-wrap js-btn-mobile-menu"><div class="c-hamburger"><span></span></div></div>
+					<div class="mobile-header__info">
+						<div class="c-hamburger-wrap js-btn-mobile-menu"><div class="c-hamburger"><span></span></div></div>
 			
-					<div class="mobile-header__logo"><a href="#"><img src="img/logo-mobile.png" alt=""></a></div>
+						<div class="mobile-header__logo"><a href="#"><img src="img/logo-mobile.png" alt=""></a></div>
+					</div>
 			
-					<div class="mobile-header__call js-btn-mobile-call"></div>
+					<div class="mobile-header__call js-btn-mobile-contacts"></div>
 				</div>
 			
-				<div class="header__top">
+				<div class="header__top js-header-top">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
+								<div class="c-hamburger-wrap active js-close-mobile-menu"><div class="c-hamburger"><span></span></div></div>
+			
 								<nav class="top-menu js-top-menu">
 									<ul class="top-menu__list">
 										<li class="top-menu__item js-top-menu-item">
-											<a href="#" class="top-menu__link">Услуги<span class="top-menu__arr"></span></a>
+											<a href="#" class="top-menu__link js-top-menu-link">Услуги<span class="top-menu__arr js-top-menu-arr"></span></a>
 			
 											<ul class="top-menu__sub js-top-menu__sub">
 												<li class="top-menu__sub-item"><a href="#" class="top-menu__sub-link">Покупателям</a></li>
@@ -51,7 +57,7 @@
 										</li>
 			
 										<li class="top-menu__item js-top-menu-item">
-											<a href="#" class="top-menu__link">Каталог недвижимости<span class="top-menu__arr"></span></a>
+											<a href="#" class="top-menu__link js-top-menu-link">Каталог недвижимости<span class="top-menu__arr js-top-menu-arr"></span></a>
 			
 											<ul class="top-menu__sub js-top-menu__sub">
 												<li class="top-menu__sub-item"><a href="#" class="top-menu__sub-link">Загородная недвижимость</a></li>
@@ -62,10 +68,10 @@
 											</ul>
 										</li>
 			
-										<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link">Новостройки</a></li>
+										<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link">Новостройки</a></li>
 			
 										<li class="top-menu__item js-top-menu-item">
-											<a href="#" class="top-menu__link">О компании<span class="top-menu__arr"></span></a>
+											<a href="#" class="top-menu__link js-top-menu-link">О компании<span class="top-menu__arr js-top-menu-arr"></span></a>
 			
 											<ul class="top-menu__sub js-top-menu__sub">
 												<li class="top-menu__sub-item"><a href="#" class="top-menu__sub-link">Агенты</a></li>
@@ -76,7 +82,7 @@
 											</ul>
 										</li>
 			
-										<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link">Контакты</a></li>
+										<li class="top-menu__item js-top-menu-item"><a href="#" class="top-menu__link js-top-menu-link">Контакты</a></li>
 									</ul>
 								</nav>
 							</div>
@@ -84,10 +90,12 @@
 					</div>
 				</div>
 			
-				<div class="header__bottom">
+				<div class="header__bottom js-header-bottom">
 					<div class="container">
 						<div class="row">
 							<div class="col-12">
+								<div class="c-hamburger-wrap active js-close-mobile-contacts"><div class="c-hamburger"><span></span></div></div>
+			
 								<div class="header__bottom-content">
 									<div class="header__logo"><a href="#"><img src="img/logo.png" alt=""></a></div>
 			
@@ -96,8 +104,11 @@
 										<div class="header__mail"><a href="mailto:info@nsr.spb.ru">info@nsr.spb.ru</a></div>
 									</div>
 			
-									<div class="header__info">
-										<div class="header__phone"><a href="tel:+78005505197">8&nbsp;800&nbsp;550&nbsp;51&nbsp;97</a>, <a href="tel:+78005505197">8&nbsp;800&nbsp;550&nbsp;51&nbsp;97</a></div>
+									<div class="header__info header__info--phone">
+										<div class="header__phone">
+											<span class="header__phone-item"><a href="tel:+78005505197">8&nbsp;800&nbsp;550&nbsp;51&nbsp;97</a>,</span>
+											<span class="header__phone-item"><a href="tel:+78005505197">8&nbsp;800&nbsp;550&nbsp;51&nbsp;97</a></span>
+										</div>
 			
 										<div class="header__time">Пн. — Сб.: с 9:00 до 20:00</div>
 									</div>
