@@ -439,6 +439,10 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
     line-height: 1.23;
     margin-bottom: 18px;
   }
+  h1 {
+    font-size: 26px;
+    line-height: 1.15;
+  }
   p {
     font-size: 16px;
     line-height: 1.5;
@@ -2637,6 +2641,15 @@ a.bredcrumb__item:hover {
   color: #000;
 }
 
+@media (max-width: 767px) {
+  .bredcrumb {
+    padding: 15px 0 18px;
+  }
+  .bredcrumb__item {
+    font-size: 16px;
+  }
+}
+
 /*-------------- catalog -----------------*/
 .catalog__top {
   display: -webkit-box;
@@ -2719,10 +2732,6 @@ a.bredcrumb__item:hover {
   border-radius: 4px;
   border: 4px solid transparent;
   text-decoration: none;
-}
-
-.catalog-list__item:hover {
-  border-color: #fcb40a;
 }
 
 .catalog-list__img {
@@ -2848,6 +2857,25 @@ a.bredcrumb__item:hover {
   width: calc(100% - 130px);
 }
 
+.catalog-list__subway {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #858585;
+  position: relative;
+  margin-top: 8px;
+}
+
+.catalog-list__subway::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  background: url(../img/sprite.png) no-repeat -50px -20px;
+  margin-right: 10px;
+}
+
 .catalog-list-param {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2871,6 +2899,110 @@ a.bredcrumb__item:hover {
 
 .catalog-list-param__val {
   font-weight: normal;
+}
+
+@media (max-width: 991px) {
+  .catalog-list__item {
+    display: block;
+  }
+  .catalog-list__img {
+    width: 160px;
+    height: 117px;
+  }
+  .catalog-list__content {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-list__item:hover {
+    border-color: #fcb40a;
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog__top {
+    margin-top: 8px;
+  }
+  .catalog-list {
+    padding: 0 10px;
+  }
+  .catalog-list__item {
+    padding: 0;
+    border: 0;
+    margin-bottom: 12px;
+  }
+  .catalog-list__img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .catalog-list__img::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(56, 56, 56, 0.45);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  .catalog-list__img:hover::after {
+    opacity: 1;
+  }
+  .catalog-list__top {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 20px 32px;
+  }
+  .catalog-list__top::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #ffffff transparent;
+    position: absolute;
+    top: -9px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .catalog-list__info {
+    width: 100%;
+    padding-right: 0;
+  }
+  .catalog-list__price, .catalog-list__part-price {
+    text-align: left;
+  }
+  .catalog-list__name {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+  .catalog-list__address {
+    line-height: 1.2;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 16px;
+    padding-top: 20px;
+  }
+  .catalog-list__price {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 12px;
+  }
+  .catalog-list__price-val {
+    font-size: 20px;
+  }
 }
 
 /*-------------- catalog-filter -----------------*/
@@ -3027,6 +3159,7 @@ a.bredcrumb__item:hover {
   text-align: center;
   background: #fff;
   margin-right: 1px;
+  margin-bottom: 1px;
 }
 
 .pagination__item:first-child {
@@ -3069,6 +3202,22 @@ a.bredcrumb__item:hover {
   line-height: 58px;
   text-transform: none;
   min-width: 218px;
+}
+
+@media (max-width: 991px) {
+  .pagination-wrap {
+    display: block;
+  }
+  .pagination-wrap .pagination {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pagination-wrap {
+    text-align: center;
+  }
 }
 
 /*-------------- product-slider -----------------*/

@@ -13,6 +13,7 @@
 		text-align: center;
 		background: #fff;
 		margin-right: 1px;
+		margin-bottom: 1px;
 	}
 
 	&__item:first-child{
@@ -51,5 +52,22 @@
 		line-height: 58px;
 		text-transform: none;
 		min-width: 218px;
+	}
+}
+
+@media (max-width: 991px) {
+	.pagination-wrap{
+		display: block;
+
+		.pagination{
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.pagination-wrap{
+		text-align: center;
 	}
 }
