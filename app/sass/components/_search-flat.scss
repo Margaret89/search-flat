@@ -10,6 +10,16 @@
 		margin-bottom: 46px;
 	}
 
+	&__fields select{
+		width: 100%;
+		background: #fff;
+		border-radius: 4px;
+		outline: none;
+		border: 0;
+		height: 50px;
+		margin-bottom: 1px;
+	}
+
 	.chosen-container:not(:last-child){
 		margin-right: 1px;
 	}

@@ -1178,6 +1178,16 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
   border-color: #adadad;
 }
 
+.form-site select {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  outline: none;
+  border: 0;
+  height: 50px;
+  margin-bottom: 1px;
+}
+
 .form-site__group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1516,6 +1526,16 @@ input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 46px;
+}
+
+.search-flat__fields select {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  outline: none;
+  border: 0;
+  height: 50px;
+  margin-bottom: 1px;
 }
 
 .search-flat .chosen-container:not(:last-child) {

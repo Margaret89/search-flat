@@ -72,6 +72,16 @@
 		border-color: #adadad;
 	}
 
+	select{
+		width: 100%;
+		background: #fff;
+		border-radius: 4px;
+		outline: none;
+		border: 0;
+		height: 50px;
+		margin-bottom: 1px;
+	}
+
 	&__group{
 		display: flex;
 		justify-content: space-between;

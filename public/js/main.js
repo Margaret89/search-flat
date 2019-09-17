@@ -46,9 +46,11 @@ $(document).ready(function () {
 	});
 
 	// Стилизация выпадающего списка
-	$('.js-select').chosen({
-		disable_search: true,
-	});
+	// if ($('.js-select').length) {
+		$('.js-select').chosen({
+			disable_search: true,
+		});
+	// }
 
 	// Табуляция
 	if ($('.js-tabs-page').length) {
