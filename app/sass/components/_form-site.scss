@@ -176,6 +176,20 @@
 	}
 }
 
+@media (max-width: 991px) {
+	.form-site{
+		padding: 42px 30px;
+		
+		&--hor input[type="text"],
+		&--hor input[type="email"],
+		&--hor input[type="time"],
+		&--hor textarea{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.form-site{
 		&__head{
@@ -195,6 +209,36 @@
 
 		&__group{
 			display: block;
+		}
+
+		&--hor{
+			margin: 0 -15px 25px;
+			padding: 25px 15px;
+		}
+
+		&--hor input[type="text"],
+		&--hor input[type="email"],
+		&--hor input[type="time"],
+		&--hor textarea{
+			width: 100%;
+		}
+
+		&--hor &__head{
+			font-size: 26px;
+			line-height: 1.2;
+			padding-right: 0;
+			margin-bottom: 15px;
+		}
+
+		&--hor &__field{
+			margin-bottom: 15px;
+		}
+
+		&--hor .btn,
+		&--hor input[type="submit"].btn{
+			min-width: 200px;
+			width: 100%;
+			text-transform: none;
 		}
 	}
 }

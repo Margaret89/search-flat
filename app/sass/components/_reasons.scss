@@ -40,3 +40,27 @@
 		@include font(normal, normal, 18px, 1.45, #1f1f1f);
 	}
 }
+
+@media (max-width: 767px) {
+	.reasons{
+		margin-bottom: 10px;
+		
+		&__item{
+			margin-bottom: 18px;
+		}
+
+		&__text{
+			width: calc(100% - 76px);
+			font-size: 16px;
+			line-height: 1.4;
+		}
+
+		&__num{
+			width: 64px;
+		}
+
+		&__num::before{
+			width: 48px;
+		}
+	}
+}

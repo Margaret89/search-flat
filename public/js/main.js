@@ -80,7 +80,7 @@ $(document).ready(function () {
 			slidesToScroll: 1,
 			responsive: [
 				{
-					breakpoint: 991,
+					breakpoint: 992,
 					settings: {
 						slidesToShow: 3,
 					}
@@ -109,7 +109,7 @@ $(document).ready(function () {
 			slidesToScroll: 1,
 			responsive: [
 				{
-					breakpoint: 767,
+					breakpoint: 768,
 					settings: {
 						arrows: false,
 						dots: true,
@@ -146,7 +146,7 @@ $(document).ready(function () {
 			nextArrow: '<button type="button" class="slick-next"></button>',
 			responsive: [
 				{
-					breakpoint: 991,
+					breakpoint: 992,
 					settings: {
 						slidesToShow: 3,
 					}
@@ -165,7 +165,7 @@ $(document).ready(function () {
 			fade: true,
 			responsive: [
 				{
-					breakpoint: 991,
+					breakpoint: 768,
 					settings: {
 						arrows: true,
 					}
@@ -205,22 +205,6 @@ $(document).ready(function () {
 			infinite: true,
 			slidesPerRow: 1,
 			slidesToShow: 1,
-			// responsive: [
-			// 	{
-			// 		breakpoint: 767,
-			// 		settings: {
-			// 			vertical: false,
-			// 		}
-			// 	},
-			// 	{
-			// 		breakpoint: 479,
-			// 		settings: {
-			// 			vertical: false,
-			// 			slidesPerRow: 3,
-			// 			slidesToShow: 3,
-			// 		}
-			// 	},
-			// ]
 		});
 		$('.js-photogallery-preview').slick({
 			autoplay: false,
@@ -230,15 +214,14 @@ $(document).ready(function () {
 			arrows: false,
 			draggable: false,
 			fade: true,
-			// responsive: [
-			// 	{
-			// 		breakpoint: 767,
-			// 		settings: {
-			// 			vertical: false,
-			// 			fade: true,
-			// 		}
-			// 	},
-			// ]
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						arrows: true,
+					}
+				},
+			]
 		});
 
 		$('.js-photo-thumb-img').click(function(){

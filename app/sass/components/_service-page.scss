@@ -13,3 +13,22 @@
 		margin: 0 auto;
 	}
 }
+
+@media (max-width: 767px) {
+	.service-desc{
+		margin-bottom: 14px;
+
+		.h1-big{
+			margin: 0 0 11px;
+			line-height: 1.15;
+		}
+
+		.h1-big br{
+			display: none;
+		}
+
+		p{
+			line-height: 1.5;
+		}
+	}
+}

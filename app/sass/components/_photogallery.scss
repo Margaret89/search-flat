@@ -106,3 +106,42 @@
 		background-size: cover;
 	}
 }
+
+@media (max-width: 991px) {
+	.photogallery-thumb{
+		width: 300px;
+
+		.slick-arrow{
+			width: 72.5px;
+		}
+
+		.slick-prev.slick-arrow{right: 72.5px;}
+	}
+
+	.photogallery-preview{
+		width: calc(100% - 310px);
+	}
+}
+
+@media (max-width: 767px) {
+	.photogallery{
+		margin-bottom: 23px;
+	}
+
+	.photogallery-preview{
+		margin: 0 -15px;
+		width: calc(100% + 30px);
+
+		&__item{
+			height: 225px;
+		}
+
+		.slick-arrow{
+			width: 50px;
+			height: 50px;
+			background: #fff;
+			z-index: 2;
+			border-radius: 0;
+		}
+	}
+}
